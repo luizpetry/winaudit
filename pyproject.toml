@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "winaudit"
+version = "0.1.0"
+description = "Auditoria de seguranca do Windows (somente leitura) com nota e relatorio HTML"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = ["psutil>=5.9"]
+
+[project.scripts]
+winaudit = "winaudit.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["winaudit*"]
